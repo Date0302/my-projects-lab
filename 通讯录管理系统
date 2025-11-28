@@ -1,0 +1,141 @@
+#include <stdio.h>
+#include <string.h>
+#define MAX_CONTACTS 100  // 最大联系人数量
+// 联系人结构体
+typedef struct Contact {
+    char name[50];
+    char phone[20];
+    char email[50];
+    char address[100];
+} Contact;
+// 全局联系人数组
+Contact contacts[MAX_CONTACTS];
+int numContacts = 0;  // 当前联系人数量
+
+// 录入联系人信息
+void inputContact() {
+    if (numContacts < MAX_CONTACTS) {
+        Contact newContact;
+        printf("请输入姓名: ");
+        scanf("%s", newContact.name);
+        printf("请输入电话号码: ");
+        scanf("%s", newContact.phone);
+        printf("请输入电子邮箱: ");
+        scanf("%s", newContact.email);
+        printf("请输入家庭住址: ");
+        scanf("%s", newContact.address);
+        contacts[numContacts++] = newContact;
+        printf("联系人信息录入成功!\n");
+    } else {
+        printf("联系人列表已满，无法录入更多信息!\n");
+    }
+}
+
+// 按姓名查询联系人信息
+void searchByName() {
+    char searchName[50];
+    printf("请输入要查询的联系人姓名: ");
+    scanf("%s", searchName);
+    for (int i = 0; i < numContacts; i++) {
+        if (strcmp(contacts[i].name, searchName) == 0) {
+            printf("姓名: %s\n", contacts[i].name);
+            printf("电话号码: %s\n", contacts[i].phone);
+            printf("电子邮箱: %s\n", contacts[i].email);
+            printf("家庭住址: %s\n", contacts[i].address);
+            return;
+        }
+    }
+    printf("未找到该姓名的联系人!\n");
+}
+
+// 修改联系人信息
+void modifyContact() {
+    char modifyName[50];
+    printf("请输入要修改的联系人姓名: ");
+    scanf("%s", modifyName);
+    for (int i = 0; i < numContacts; i++) {
+        if (strcmp(contacts[i].name, modifyName) == 0) {
+            printf("请重新输入姓名: ");
+            scanf("%s", contacts[i].name);
+            printf("请重新输入电话号码: ");
+            scanf("%s", contacts[i].phone);
+            printf("请重新输入电子邮箱: ");
+            scanf("%s", contacts[i].email);
+            printf("请重新输入家庭住址: ");
+            scanf("%s", contacts[i].address);
+            printf("联系人信息修改成功!\n");
+            return;
+        }
+    }
+    printf("未找到该姓名的联系人，无法修改!\n");
+}
+
+// 删除联系人信息
+void deleteContact() {
+    char deleteName[50];
+    printf("请输入要删除的联系人姓名: ");
+    scanf("%s", deleteName);
+    for (int i = 0; i < numContacts; i++) {
+        if (strcmp(contacts[i].name, deleteName) == 0) {
+            for (int j = i; j < numContacts - 1; j++) {
+                contacts[j] = contacts[j + 1];
+            }
+            numContacts--;
+            printf("联系人信息删除成功!\n");
+            return;
+        }
+    }
+    printf("未找到该姓名的联系人，无法删除!\n");
+}
+
+// 冒泡排序按姓名升序排列联系人
+void sortContactsByName() {
+    for (int i = 0; i < numContacts - 1; i++) {
+        for (int j = 0; j < numContacts - i - 1; j++) {
+            if (strcmp(contacts[j].name, contacts[j + 1].name) > 0) {
+                Contact temp = contacts[j];
+                contacts[j] = contacts[j + 1];
+                contacts[j + 1] = temp;
+            }
+        }
+    }
+    printf("联系人已按姓名升序排列成功!\n");
+}
+
+// 主函数，程序入口
+int main() {
+    int choice;
+    do {
+        printf("\n联系人管理系统\n");
+        printf("1. 录入联系人信息\n");
+        printf("2. 按姓名查询联系人信息\n");
+        printf("3. 修改联系人信息\n");
+        printf("4. 删除联系人信息\n");
+        printf("5. 按姓名升序排列联系人\n");
+        printf("6. 退出\n");
+        printf("请选择操作: ");
+        scanf("%d", &choice);
+        switch (choice) {
+        case 1:
+            inputContact();
+            break;
+        case 2:
+            searchByName();
+            break;
+        case 3:
+            modifyContact();
+            break;
+        case 4:
+            deleteContact();
+            break;
+        case 5:
+            sortContactsByName();
+            break;
+        case 6:
+            printf("程序已退出!\n");
+            break;
+        default:
+            printf("无效的选择，请重新选择!\n");
+        }
+    } while (choice!= 6);
+    return 0;
