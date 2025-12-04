@@ -1,0 +1,30 @@
+public class Student {
+        String name;  // 定义姓名变量属性
+       int age;      // 定义年龄变量属性
+
+                // 无参构造方法
+                public Student() {
+                           name = "张海";
+                           age = 21;
+                       }
+
+               // 带参构造方法
+              public Student(String n, int a) {
+                           name = n;
+                           age = a;
+                      }
+
+               // 普通成员方法
+               public void sayHello() {
+                          System.out.println("大家好，我是" + name + "，年龄" + age);
+                       }
+
+               // 普通成员方法的重载
+               public void sayHello(int newage) {
+                          System.out.println("大家好，我是" + name + "，年龄" + newage);
+                       }
+
+               // 普通成员方法的重载
+               public void sayHello(String na, int newage) {
+                           System.out.println("大家好，我是" + na + "，年龄" + newage);
+                       }
