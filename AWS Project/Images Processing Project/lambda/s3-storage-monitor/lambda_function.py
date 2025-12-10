@@ -7,7 +7,7 @@ cloudwatch = boto3.client('cloudwatch')
 bucket_name = 'my-image-processed-first'
 
 def lambda_handler(event, context):
-    print("🚀 Metrics Lambda started")
+    print(" Metrics Lambda started")
 
     paginator = s3.get_paginator('list_objects_v2')
     total_size = 0
@@ -20,11 +20,11 @@ def lambda_handler(event, context):
                 total_objects += 1
 
     except Exception as e:
-        print(f"❌ Error reading S3 bucket: {e}")
+        print(f" Error reading S3 bucket: {e}")
         raise e
 
-    print(f"📦 Total objects: {total_objects}")
-    print(f"📊 Total size: {total_size} bytes")
+    print(f" Total objects: {total_objects}")
+    print(f" Total size: {total_size} bytes")
 
     try:
         cloudwatch.put_metric_data(
