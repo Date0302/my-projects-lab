@@ -27,9 +27,9 @@ The system contains 3 Lambdas:
 
 Detailed explanations follow:
 
-### 🔵🔵 1. Generate-Upload-URL Lambda
+###  1. Generate-Upload-URL Lambda
 
-#### 📌📌 Functionality
+####  Functionality
 
 Generates a pre-signed upload URL (PUT) for logged-in Cognito users.
 
@@ -37,11 +37,11 @@ Ensures each user's uploaded images are automatically placed into their dedicate
 
 The frontend uses this URL to upload images securely without exposing AWS keys.
 
-#### 📁📁 Input (from API Gateway)
+####  Input (from API Gateway)
 
 User identity (Cognito User ID) automatically passed by JWT authorizer.
 
-#### 📤📤 Output
+#### Output
 
 ```
 {
@@ -50,7 +50,7 @@ User identity (Cognito User ID) automatically passed by JWT authorizer.
 }
 ```
 
-#### 🔒🔒 Security Features
+#### Security Features
 
 Can only be invoked by authenticated Cognito users.
 
@@ -58,11 +58,11 @@ S3 pre-signed URL validity is 5 minutes.
 
 Ensures user isolation, preventing overwriting of others' files.
 
-### 🟣🟣🟣 2. image-processor-lambda
+###  2. image-processor-lambda
 
 The core processing Lambda of this system.
 
-#### 📌📌 Functionality
+####  Functionality
 
 - Receives messages from the SQS queue.
 - Downloads the original image (S3).
@@ -71,14 +71,14 @@ The core processing Lambda of this system.
 - Writes to DynamoDB (image metadata).
 - Sends SNS notification emails.
 
-#### 🧠🧠🧠 Advantages of Backend Asynchronous Processing
+####  Advantages of Backend Asynchronous Processing
 
 - High concurrency
 - Decoupling
 - Lambda auto-scaling
 - Each task is independent and does not block others.
 
-#### 📤📤 Output (Example data written to DynamoDB)
+####  Output (Example data written to DynamoDB)
 
 ```
 {
@@ -89,9 +89,9 @@ The core processing Lambda of this system.
 }
 ```
 
-### 🟢🟢🟢 3. S3 Metrics Monitoring Lambda
+###  3. S3 Metrics Monitoring Lambda
 
-#### 📌📌 Functionality
+####  Functionality
 
 Periodically (configurable: 1 min, 5 min, 1 hour, etc.) statistics:
 
@@ -103,7 +103,7 @@ And reports to CloudWatch:
 - Namespace: `CustomS3`
 - Metrics: `BucketSizeBytes` `NumberOfObjects`
 
-#### 🎯🎯🎯 Purpose
+####  Purpose
 
 - Reporting
 - Cost monitoring
@@ -147,9 +147,9 @@ CloudWatch 指标监控
 
 详细说明如下：
 
-### 🔵 1. GenerateUploadURL Lambda
+###  1. GenerateUploadURL Lambda
 
-#### 📌 功能
+####  功能
 
 给已登录的 Cognito 用户生成 预签名上传 URL（PUT）
 
@@ -157,18 +157,18 @@ CloudWatch 指标监控
 
 前端通过此 URL 安全地上传图片，不需要暴露 AWS 秘钥
 
-#### 📁 输入（来自 API Gateway）
+####  输入（来自 API Gateway）
 
 JWT authorizer 自动传递用户身份（Cognito User ID）
 
-#### 📤 输出
+####  输出
 
 {
   "upload_url": "<PresignedURL>",
   "file_path": "user-uploads/<userId>/<uuid>.jpg"
 }
 
-#### 🔒 安全特性
+####  安全特性
 
 只能经过 Cognito 登录用户调用
 
@@ -176,11 +176,11 @@ S3 预签名 URL 有效期 5 分钟
 
 保证用户隔离，不会覆盖他人文件
 
-### 🟣 2. image-processor-lambda
+###  2. image-processor-lambda
 
 本系统的核心处理 Lambda。
 
-#### 📌 功能
+####  功能
 
 从 SQS 队列接收消息
 
@@ -194,7 +194,7 @@ S3 预签名 URL 有效期 5 分钟
 
 发送 SNS 通知邮件
 
-#### 🧠 后端异步处理优势
+####  后端异步处理优势
 
 高并发
 
@@ -204,7 +204,7 @@ Lambda 自动扩容
 
 每个任务独立，不会互相阻塞
 
-#### 📤 输出（写入 DynamoDB 的数据示例）
+####  输出（写入 DynamoDB 的数据示例）
 
 {
   "imageId": "uuid",
@@ -213,9 +213,9 @@ Lambda 自动扩容
   "status": "DONE"
 }
 
-### 🟢 3. S3 Metrics Monitoring Lambda
+###  3. S3 Metrics Monitoring Lambda
 
-#### 📌 功能
+####  功能
 
 定时（1 分钟、5 分钟、1 小时任意）统计：
 
@@ -230,7 +230,7 @@ Metrics:
   - BucketSizeBytes
   - NumberOfObjects
 
-#### 🎯 用途
+####  用途
 
 做报表
 
