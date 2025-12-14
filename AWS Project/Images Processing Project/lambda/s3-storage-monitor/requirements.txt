@@ -1,2 +1,0 @@
-# No external dependencies required.
-# boto3 is included in AWS Lambda by default.
