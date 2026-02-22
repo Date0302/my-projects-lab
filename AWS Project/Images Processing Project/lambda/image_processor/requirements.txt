@@ -1,0 +1,2 @@
+# Dependencies are provided through a Lambda Layer.
+# Pillow is installed in the layer, not via requirements.txt.
