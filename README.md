@@ -2,7 +2,7 @@
 
 #### 🌐 Language / 言語 / 语言
 
- US English: [README.md](README.md)                                                JP 日本語: [README.ja.md](README.ja.md)                                         CN 中文: [README.zh-CN.md](README.zh-CN.md)
+ 🇺🇸English: [README.md](README.md)                                                🇯🇵日本語: [README.ja.md](README.ja.md)                                         🇨🇳中文: [README.zh-CN.md](README.zh-CN.md)
 
 # 🚀 my-projects-lab
 
@@ -13,7 +13,7 @@ At present, I am still studying hard, and there are many mistakes or unreasonabl
 
 This repository hosts my self-developed code to meet various needs. It mainly includes:
 
-Python utilities and scripts  
+Python utilities and scripts 
 
 Java project examples  
 
