@@ -1,6 +1,6 @@
 # Cloud Engineer Portfolio
 
- US English: [README.md](README.md)                                                JP 日本語: [README.ja.md](README.ja.md)
+ 🇺🇸English: [README.md](README.md)                                                🇯🇵日本語: [README.ja.md](README.ja.md)
 
 ## About Me
 
