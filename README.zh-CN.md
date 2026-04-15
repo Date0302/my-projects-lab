@@ -2,7 +2,7 @@
 
 #### 🌐 Language / 言語 / 语言
 
- 🇺🇸English: [README.md](README.md)                                                🇯🇵日本語: [README.ja.md](README.ja.md)                                         🇯🇵中文: [README.zh-CN.md](README.zh-CN.md)
+ 🇺🇸English: [README.md](README.md)                                                🇯🇵日本語: [README.ja.md](README.ja.md)                                         🇨🇳中文: [README.zh-CN.md](README.zh-CN.md)
 
 # 🚀 my-projects-lab
 
