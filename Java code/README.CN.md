@@ -1,0 +1,47 @@
+# README
+
+#### 🌐 Language / 言語 / 语言
+
+ 🇺🇸English: [README.md](README.md)                                                🇯🇵日本語: [README.ja.md](README.ja.md)                                         🇨🇳中文: [README.CN.md](README.CN.md)
+
+## Java 应用程序项目
+
+### 项目简介
+
+这是一个基础的 Java 应用项目，
+主要用于练习面向对象编程思想以及 Java 程序的基本结构。
+
+项目内容以清晰、易读为目标，适合初学与复习使用。
+
+### 功能说明
+
+类与对象的基本设计
+
+简单业务逻辑实现
+
+清晰的包结构
+
+### 使用技术
+
+Java
+
+Java 标准库
+
+### 运行方式
+
+1.编译程序：
+
+```bash
+javac Main.java
+```
+
+2.运行程序：
+
+```bash
+java Main
+```
+
+### 说明
+
+本项目为学习用途，
+重点在于 Java 基础知识的理解，而非复杂框架或高级特性。
