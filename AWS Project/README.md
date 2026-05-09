@@ -4,8 +4,6 @@
 
  🇺🇸English: [README.md](README.md)                                                🇯🇵日本語: [README.ja.md](README.ja.md)                                         🇨🇳中文: [README.CN.md](README.CN.md)
 
-## プロジェクト概要
-
 ## Project Overview
 
 This repository showcases my comprehensive skills in AWS cloud computing, serverless architecture, event-driven systems, and cloud security management. It contains two main projects:
