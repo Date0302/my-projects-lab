@@ -4,8 +4,6 @@
 
  🇺🇸English: [README.md](README.md)                                                🇯🇵日本語: [README.ja.md](README.ja.md)                                         🇨🇳中文: [README.CN.md](README.CN.md)
 
-## プロジェクト概要
-
 ## 项目概述
 
 本仓库展示了我在 AWS 云计算、无服务器架构、事件驱动系统和云安全管理方面的综合能力。
