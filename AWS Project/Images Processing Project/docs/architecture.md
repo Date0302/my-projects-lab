@@ -2,7 +2,7 @@
 
 #### 🌐 Language / 言語 / 语言
 
- US English: [architecture.md](architecture.md)                                                JP 日本語: [architecture.ja.md](architecture.ja.md)
+ 🇺🇸US English: [architecture.md](architecture.md)                                                🇯🇵JP 日本語: [architecture.ja.md](architecture.ja.md)
 
 ## Overview
 
