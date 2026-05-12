@@ -1,8 +1,8 @@
 # Project Structure
 
-#### 🌐 言語 / Language / 语言
+#### 🌐 言語 / Language
 
- 英語: [project-structure.md](project-structure.md)                                               日本語: [project-structure.ja.md](project-structure.ja.md)
+ 🇺🇸英語: [project-structure.md](project-structure.md)                                               🇯🇵日本語: [project-structure.ja.md](project-structure.ja.md)
 
 Images Processing Project/
 # Full Project Structure
