@@ -1,8 +1,8 @@
 # Performance Analysis
 
-#### 🌐 言語 / Language / 语言
+#### 🌐 言語 / Language
 
- 英語: [performance.md](performance.md)                                               日本語: [performance.ja.md](performance.ja.md)
+ 🇺🇸英語: [performance.md](performance.md)                                               🇯🇵日本語: [performance.ja.md](performance.ja.md)
 
 ## テスト環境
 
