@@ -1,6 +1,6 @@
 # Architecture Design
 
-#### 🌐 Language / 言語 / 语言
+#### 🌐 Language / 言語
 
  🇺🇸US English: [architecture.md](architecture.md)                                                🇯🇵JP 日本語: [architecture.ja.md](architecture.ja.md)
 
