@@ -1,8 +1,8 @@
 # Monitoring Strategy
 
-#### 🌐 言語 / Language / 语言
+#### 🌐 言語 / Language
 
- 英語: [monitoring.md](monitoring.md)                                               日本語: [monitoring.ja.md](monitoring.ja.md)
+ 🇺🇸英語: [monitoring.md](monitoring.md)                                               🇯🇵日本語: [monitoring.ja.md](monitoring.ja.md)
 
 ## モニタリングツール
 
