@@ -1,0 +1,6 @@
+AWS Cost Optimization Guide
+
+1. Use S3 Intelligent-Tiering.
+2. Enable Compute Optimizer.
+3. Delete unused EBS volumes.
+4. Monitor spending using AWS Budgets.

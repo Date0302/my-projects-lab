@@ -1,0 +1,6 @@
+Security Policy
+
+1. MFA is required for all IAM users.
+2. Root account usage is prohibited.
+3. Password rotation every 90 days.
+4. CloudTrail must remain enabled.
