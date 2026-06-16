@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+
+.env
+
+.terraform/
+
+.vscode/
+
+.idea/
+
+*.zip
+
+*.log
